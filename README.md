@@ -15,6 +15,37 @@ And access exclusive developer resources [here](http://developers.repcamp.com).
 - A **REST Services** interface so you forget about http calls and focus on transffering back and forth the data.
 - A **Main Controller**: The RepCampAPI is the main cantroller wich you will be using for authenticating and centralizing the API calls.
 
+## RepCamp Java SDK Installation
+```c
+<dependency>
+      <groupId>net.kriter.rcsdk</groupId>
+      <artifactId>repcamp-sdk</artifactId>
+      <version>0.2.8</version>
+</dependency>
+```
+## Dependencies
+```c
+<dependency>
+      <groupId>com.sun.jersey</groupId>
+      <artifactId>jersey-client</artifactId>
+      <version>1.18.3</version>
+</dependency>
+<dependency>
+      <groupId>com.sun.jersey</groupId>
+      <artifactId>jersey-core</artifactId>
+      <version>1.18.3</version>
+</dependency>
+<dependency>
+      <groupId>com.sun.jersey</groupId>
+      <artifactId>jersey-json</artifactId>
+      <version>1.18.3</version>
+</dependency>
+<dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-mapper-asl</artifactId>
+      <version>1.9.13</version>
+</dependency>
+```
 ## Lets Code!
 
 - Instantiate the main RepCamp SDK controller
@@ -66,6 +97,8 @@ if(resp.getSingleResponse() != null)
 ```c
 List<String> criteria = new ArrayList<String>();
 criteria.add("code=CT0001");
+
 List<Customer> customerslist = repcampAPI.getCustomers(criteria, 0, 1);
+
 for(Customer customer : customerslist) System.out.println(customer.toString());
 ```
