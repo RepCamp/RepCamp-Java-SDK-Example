@@ -1,4 +1,4 @@
-package com.company.applicaiton;
+package com.company.application;
 
 import com.company.services.CustomerService;
 import net.kriter.rcsdk.model.Customer;
@@ -23,6 +23,31 @@ public class CustomerController {
         this.customerService = new CustomerService();
     }
 
+    public boolean addCustomer(String code)
+    {
+        try
+        {
+            Customer customer = this.customerService.findByCode(code);
+
+            GenericResponse resp =  repcampAPI.addCustomer(customer);
+
+            if(resp.getSingleResponse() != null)
+            {
+                if(resp.getSingleResponse().getError() != null)
+                {
+                    System.out.println("Failed to upload customer: (CODE) " + customer.getCode() + " Error: " + resp.getSingleResponse().getError());
+                }
+            }
+
+            System.out.println(resp.toString());
+        }
+        catch (Exception ex)
+        {
+            ex.printStackTrace();
+        }
+
+        return true;
+    }
 
     public boolean removeCustomers(Date date)
     {

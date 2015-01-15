@@ -44,7 +44,13 @@ public class CustomerRepository {
 
         return modifiedCustomers;
     }
-    
+
+    public MyCustomer findByCode(String code)
+    {
+        //Retrieve this specific customer
+        return dataBaseCustomer1();
+    }
+
     public List<String> removedItems(Date date) throws Exception
     {
         //Retrieve all Customer codes from a given date... so you make the synchronization smart ;)
@@ -131,4 +137,6 @@ public class CustomerRepository {
 
         return mycustomer;
     }
+
+
 }

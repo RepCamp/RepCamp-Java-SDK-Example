@@ -36,6 +36,19 @@ public class CustomerService {
         return mapAndTreatMyCustomers(mycustomers);
     }
 
+    public Customer findByCode(String code) throws Exception
+    {
+        CustomerRepository customerRepository = new CustomerRepository();
+
+        //Retrieve your database customer from a given criteria
+        MyCustomer mycustomer = customerRepository.findByCode(code);
+
+        //Instantiate the mapper
+        CustomerMapper customerMapper = new CustomerMapper();
+
+        return customerMapper.map(mycustomer);
+    }
+
     public List<String> removedItems(Date date) throws Exception
     {
         CustomerRepository customerRepository = new CustomerRepository();
@@ -58,4 +71,5 @@ public class CustomerService {
 
         return customers;
     }
+
 }

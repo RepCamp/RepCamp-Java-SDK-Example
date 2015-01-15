@@ -1,10 +1,7 @@
-package com.company.applicaiton;
+package com.company.application;
 
 import net.kriter.rcsdk.model.APIData;
 import net.kriter.rcsdk.rest.RepCampAPI;
-
-import java.util.Date;
-import java.util.GregorianCalendar;
 
 public class Main {
 
@@ -39,10 +36,14 @@ public class Main {
 //            if(customerController.removeCustomers(date)) System.out.println("Delete Customers - OK");
 //            else System.out.println("Delete Customers - FAILED");
 
+            //Uncoment for single customer upload
+//            if(customerController.addCustomer("CT0001")) System.out.println("Upload Customer - OK");
+//            else System.out.println("Upload Customer - FAILED");
+
             //Uncomment for customers upload
             //Set date instead of null for a partial synchronization. If null, all customers will be uploaded
-            if(customerController.uploadCustomers(null)) System.out.println("Upload Customers - OK");
-            else System.out.println("Upload Customers - FAILED");
+//            if(customerController.uploadCustomers(null)) System.out.println("Upload Customers - OK");
+//            else System.out.println("Upload Customers - FAILED");
 
 
             System.out.println("********************************** FINISHED **********************************");

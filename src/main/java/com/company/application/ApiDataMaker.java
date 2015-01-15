@@ -1,4 +1,4 @@
-package com.company.applicaiton;
+package com.company.application;
 
 import net.kriter.rcsdk.model.APIData;
 
