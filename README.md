@@ -79,6 +79,27 @@ else System.out.println("Authentication ----------- FAILED");
 Customer customer = new Customer();
 //Set all necessary atributes
 customer.setCode("CT0001");
+customer.setFiscal_name("Kriter Software, S.L.");
+customer.setComercial_name("Kriter Software");
+customer.setVat_number("D58709832");
+customer.setTelephone("+34 937575997");
+customer.setTelephone_2("");
+customer.setEmail("support@repcamp.com");
+customer.setAddress("Pablo Iglesias 63");
+customer.setAddress_2("PB L1");
+customer.setCity("Mataró");
+customer.setZip("08302");
+customer.setState("Barcelona (BCN)");
+customer.setCountry("SPAIN");
+customer.setLatitude(new BigDecimal("41.531395"));
+customer.setLongitude(new BigDecimal("2.43232"));
+customer.setPayment_method("Bank Transfer 30 days");
+customer.setDiscount(new BigDecimal("10"));
+customer.setDescription("This is just a comment area");
+customer.setStatus((short) 1);
+customer.setPricelist("01");
+customer.setLanguage("en");
+//etc.
 ```
 - Upload it and handle the response
 ```c
