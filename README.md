@@ -11,7 +11,7 @@ Join the **Partner Program** to earn client revenue, discover how [here](http://
 And access exclusive developer resources [here](http://developers.repcamp.com).
 
 ## What does the RepCamp SDK contain?
-- A **Model** of items that RepCamp has such as: Customers, Products, Categories, PriceLists, etc.
+- A set of platform **Objects** that RepCamp has such as: Customers, Products, Categories, PriceLists, etc.
 - A **REST Services** interface so you forget about http calls and focus on transffering back and forth the data.
 - A **Main Controller**: The RepCampAPI is the main cantroller wich you will be using for authenticating and centralizing the API calls.
 
