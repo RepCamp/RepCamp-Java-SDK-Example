@@ -11,7 +11,7 @@ public final class ApiDataMaker {
     {
         //API Data to be modified. Retrieve it from a *.properties file or just stick it in your code!
 
-        String url = "http://repcamp.com:3200";
+        String url = "http://api.repcamp.com";
         String username = "your@email.com";
         String password = "Sha1_encrypted_password";
         String secretkey = "your_secret_key";
