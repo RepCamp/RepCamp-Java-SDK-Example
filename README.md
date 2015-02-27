@@ -17,11 +17,21 @@ And access exclusive developer resources [here](http://developers.repcamp.com).
 
 ## RepCamp Java SDK Installation
 ```c
-<dependency>
-      <groupId>net.kriter.rcsdk</groupId>
-      <artifactId>repcamp-sdk</artifactId>
-      <version>0.2.8</version>
-</dependency>
+<repositories>
+        <repository>
+            <id>kriter-code</id>
+            <name>kriter-code-releases</name>
+            <url>http://code.kriter.net:8081/artifactory/libs-release-local</url>
+      </repository>
+</repositories>
+
+<dependencies>
+      <dependency>
+            <groupId>net.kriter.rcsdk</groupId>
+            <artifactId>repcamp-sdk</artifactId>
+            <version>1.0.0</version>
+      </dependency>
+</dependencies>
 ```
 ## Dependencies
 ```c
